@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400&display=swap');
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+
+@layer components{
+
+    .bannerIcon{
+
+        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+
+    }
+
+    .resumeLi {
+
+    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
+
+         }
+
+.bgOpacity {
+
+@apply bg-black bg-opacity-40;
+
+                  }
+
+    .contactInput{
+
+        @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
+
+    }
+
+.contactTextArea{
+
+    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
+
+
+
+
+.active {
+
+    color: white;
+
+}
+
+.scrollbar-hide::-webkit-scrollbar{
+
+    display: none;
+
+}
+
+
+@layer base {
+    html {
+        font-family: Ubuntu;
+    }
+}
+
+
+    .ant-carousel {
+    .slick-next {
+    &::before {
+    content: 'Previous';
+    }
+    }
+    .slick-prev {
+    &::before {
+    content: 'Next';
+    }
+    }
+    };
+    
+    
+    
+    
+    .ant-btn {
+    text-transform: uppercase;
+    }
+    
+    
+    .ant-btn-link {
+    text-transform: none;
+    }
+    
+/*     
+    .ant-btn-primary {
+    background: transparent linear-gradient(90deg, #05AEED 0%, #0FF7B4 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+    } */
+
+    .ant-btn-register {
+        background: transparent linear-gradient(90deg,#f3e8e8, #1FA2FF);
+        border: none;
+        font-weight: 600;
+        }
+
+    .ant-btn-login {
+        background: transparent linear-gradient(90deg,#20BDFF 0%, #fff 100%);
+        border: none;
+        font-weight: 600;
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+    
+    .ant-btn-login:hover,
+    .ant-btn-register:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+/*     
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus {
+    background: transparent linear-gradient(90deg, #05AEED 0%, #0FF7B4 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    }
+    
+       
+     */
+    
+    
+    .wow {
+       background: linear-gradient(90deg,#1FA2FF, #12D8FA,#A6FFCB)
+    }
+    
+    
+    .ant-input-affix-wrapper {
+        width: 250px;
+    }
+    
+    .ant-form-item {
+        margin-bottom: 10px;
+    }
